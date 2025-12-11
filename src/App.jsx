@@ -11,7 +11,6 @@ const App = () => {
   const fetchImages = async () => {
     const res = await fetch(
       `https://api.unsplash.com/search/photos?query=${query}&per_page=30&client_id=${ACCESS_KEY}`
-
     );
     const data = await res.json();
     setImages(data.results);
